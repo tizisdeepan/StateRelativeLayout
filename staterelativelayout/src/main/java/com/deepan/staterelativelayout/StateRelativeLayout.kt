@@ -14,8 +14,8 @@ class StateRelativeLayout : RelativeLayout {
 
     fun setState(id: Int) {
         for (i in 0..childCount) {
-            val child = getChildAt(i)
-            if (child.id == id) child.visibility = View.VISIBLE else child.visibility = View.GONE
+            val child: View? = getChildAt(i)
+            if (child?.id == id) child.visibility = View.VISIBLE else child?.visibility = View.GONE
         }
     }
 }
